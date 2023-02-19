@@ -161,13 +161,17 @@
     <ClCompile Include="Resources\Headers\WindowMessageMap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\Images\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Resources\Headers\CustomException.h" />
+    <ClInclude Include="Resources\Headers\resource.h" />
     <ClInclude Include="Resources\Headers\Window.h" />
     <ClInclude Include="Resources\Headers\Onyx.h" />
     <ClInclude Include="Resources\Headers\WindowMessageMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game_Engine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
