@@ -72,15 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -155,13 +159,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CustomException.cpp" />
-    <ClCompile Include="WinMain.cpp" />
-    <ClCompile Include="Resources\Headers\Window.cpp" />
-    <ClCompile Include="Resources\Headers\WindowMessageMap.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Resources\Headers\CustomException.h" />
+    <ClInclude Include="Resources\Headers\Keyboard.h" />
     <ClInclude Include="Resources\Headers\resource.h" />
     <ClInclude Include="Resources\Headers\Window.h" />
     <ClInclude Include="Resources\Headers\Onyx.h" />
@@ -172,6 +171,13 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\CustomException.cpp" />
+    <ClCompile Include="Code\Keyboard.cpp" />
+    <ClCompile Include="Code\Window.cpp" />
+    <ClCompile Include="Code\WindowMessageMap.cpp" />
+    <ClCompile Include="Code\WinMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,9 +1,8 @@
-﻿#include "Resources/Headers/Onyx.h"
+﻿#include <Onyx.h>
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
 try {
 	Window wnd(800, 300, "Onyx");
-	Window wnd2(800, 300, "Best");
 	MSG msg;
 	BOOL gResult;
 

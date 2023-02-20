@@ -1,4 +1,4 @@
-#include "Resources/Headers/CustomException.h"
+#include <CustomException.h>
 #include <sstream>
 
 CustomException::CustomException(int line, const char* file) noexcept

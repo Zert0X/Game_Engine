@@ -1,6 +1,6 @@
-#include "Window.h"
+#include <Window.h>
 #include <sstream>
-#include "resource.h"
+#include <resource.h>
 // Window Class Stuff
 Window::WindowClass Window::WindowClass::wndClass;
 
@@ -105,6 +105,29 @@ LRESULT Window::HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noe
 	case WM_CLOSE:
 		PostQuitMessage(0);
 		return 0;
+		break;
+
+	//Clear keystates on focusloss for evading zombie keys
+	case WM_KILLFOCUS:
+		kbd.ClearState();
+		break;
+
+	/************ KEYBOARD MESSAGES ************/
+	case WM_KEYUP:
+	case WM_SYSKEYUP:
+		kbd.OnKeyReleased(static_cast<unsigned char>(wParam));
+		break;
+
+	case WM_KEYDOWN:
+	case WM_SYSKEYDOWN:
+		if(!(lParam & 0x040000000) || kbd.AutorepeatIsEnabled())
+		kbd.OnKeyPressed(static_cast<unsigned char>(wParam));
+		break;
+
+	case WM_CHAR:
+		kbd.OnChar(static_cast<unsigned char>(wParam));
+		break;
+	/******** END OF KEYBOARD MESSAGES ********/
 	}
 
 	return DefWindowProc(hWnd, msg, wParam, lParam);

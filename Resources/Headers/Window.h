@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Onyx.h"
-#include "CustomException.h"
-
+#include <Onyx.h>
+#include <CustomException.h>
+#include <Keyboard.h>
 class Window
 {
+
 public:
 	class Exception : public CustomException {
 	public:
@@ -35,6 +36,7 @@ private:
 		static WindowClass wndClass;
 		HINSTANCE hInst;
 	};
+
 public:
 	Window(int width, int height, const char* name);
 	~Window();
@@ -44,6 +46,9 @@ private:
 	static LRESULT CALLBACK HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
 	static LRESULT CALLBACK HandleMsgThunk(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
 	LRESULT HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
+
+public:
+	Keyboard kbd;
 private:
 	int width;
 	int height;
