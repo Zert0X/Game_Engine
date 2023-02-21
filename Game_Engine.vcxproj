@@ -159,8 +159,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Resources\Headers\App.h" />
     <ClInclude Include="Resources\Headers\CustomException.h" />
     <ClInclude Include="Resources\Headers\Keyboard.h" />
+    <ClInclude Include="Resources\Headers\Mouse.h" />
     <ClInclude Include="Resources\Headers\resource.h" />
     <ClInclude Include="Resources\Headers\Window.h" />
     <ClInclude Include="Resources\Headers\Onyx.h" />
@@ -173,8 +175,10 @@
     <Image Include="Resources\Images\icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\App.cpp" />
     <ClCompile Include="Code\CustomException.cpp" />
     <ClCompile Include="Code\Keyboard.cpp" />
+    <ClCompile Include="Code\Mouse.cpp" />
     <ClCompile Include="Code\Window.cpp" />
     <ClCompile Include="Code\WindowMessageMap.cpp" />
     <ClCompile Include="Code\WinMain.cpp" />
