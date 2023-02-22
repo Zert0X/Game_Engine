@@ -1,28 +1,20 @@
 #include <App.h>
-
 App::App()
 	:
 	wnd(800, 600, "Onyx")
 {}
 
 int App::Go() {
-	MSG msg;
-	BOOL gResult;
-
-	while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0) {
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+	while (true) {
+		
+		if (const auto ecode = Window::ProcessMessage()) {
+			return *ecode;
+		}
 
 		DoFrame();
 	}
 
-	if (gResult == -1) {
-		throw CHWND_LAST_EXCEPT();
-	}
-
-	return msg.wParam;
 }
 
 void App::DoFrame() {
-
 }
