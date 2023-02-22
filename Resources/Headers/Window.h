@@ -1,5 +1,4 @@
 #pragma once
-
 #include <Onyx.h>
 #include <CustomException.h>
 #include <Keyboard.h>
@@ -39,6 +38,7 @@ private:
 	};
 
 public:
+	Window() {};
 	Window(int width, int height, const char* name);
 	~Window();
 	Window(const Window&) = delete;

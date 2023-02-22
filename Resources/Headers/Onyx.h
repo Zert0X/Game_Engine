@@ -42,4 +42,3 @@
 #define STRICT
 
 #include <Windows.h>
-#include "Window.h"
