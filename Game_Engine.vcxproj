@@ -163,6 +163,9 @@
   <ItemGroup>
     <ClInclude Include="Resources\Headers\App.h" />
     <ClInclude Include="Resources\Headers\CustomException.h" />
+    <ClInclude Include="Resources\Headers\dxerr.h" />
+    <ClInclude Include="Resources\Headers\DxgiInfoManager.h" />
+    <ClInclude Include="Resources\Headers\Graphics.h" />
     <ClInclude Include="Resources\Headers\Keyboard.h" />
     <ClInclude Include="Resources\Headers\Mouse.h" />
     <ClInclude Include="Resources\Headers\resource.h" />
@@ -180,6 +183,9 @@
   <ItemGroup>
     <ClCompile Include="Code\App.cpp" />
     <ClCompile Include="Code\CustomException.cpp" />
+    <ClCompile Include="Code\dxerr.cpp" />
+    <ClCompile Include="Code\DxgiInfoManager.cpp" />
+    <ClCompile Include="Code\Graphics.cpp" />
     <ClCompile Include="Code\Keyboard.cpp" />
     <ClCompile Include="Code\Mouse.cpp" />
     <ClCompile Include="Code\Timer.cpp" />
