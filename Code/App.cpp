@@ -18,6 +18,6 @@ int App::Go() {
 
 void App::DoFrame() {
 	const float c = tan(timer.Peek())/5;
-	wnd.Gfx().ClearBuffer(c, c, c);
+	wnd.Gfx().DrawTestTriangle();
 	wnd.Gfx().EndFrame();
 }

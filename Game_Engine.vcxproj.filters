@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Shaders">
+      <UniqueIdentifier>{f7d148e8-b176-4fc0-bef3-8708e7939701}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources\Headers\Window.h">
@@ -96,5 +99,13 @@
     <ClCompile Include="Code\DxgiInfoManager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Code\Shaders\VertexShader.hlsl">
+      <Filter>Исходные файлы\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Code\Shaders\PixelShader.hlsl">
+      <Filter>Исходные файлы\Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
