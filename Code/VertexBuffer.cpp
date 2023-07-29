@@ -1,4 +1,4 @@
-#include "VertexBuffer.h"
+#include <VertexBuffer.h>
 
 void VertexBuffer::Bind(Graphics& gfx) noexcept{
 	const UINT offset = 0u;

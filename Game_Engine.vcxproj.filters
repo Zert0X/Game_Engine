@@ -114,9 +114,6 @@
     <ClInclude Include="Resources\Headers\Drawable\Box.h">
       <Filter>Файлы заголовков\Drawable</Filter>
     </ClInclude>
-    <ClInclude Include="Code\PixelShader.cpp">
-      <Filter>Исходные файлы\Bindable</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game_Engine.rc">
@@ -187,6 +184,9 @@
       <Filter>Исходные файлы\Bindable</Filter>
     </ClCompile>
     <ClCompile Include="Code\VertexShader.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\PixelShader.cpp">
       <Filter>Исходные файлы\Bindable</Filter>
     </ClCompile>
   </ItemGroup>

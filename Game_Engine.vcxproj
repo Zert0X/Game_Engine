@@ -183,7 +183,6 @@
     </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Code\PixelShader.cpp" />
     <ClInclude Include="Resources\Headers\App.h" />
     <ClInclude Include="Resources\Headers\Bindable\Bindable.h" />
     <ClInclude Include="Resources\Headers\Bindable\BindableBase.h" />
@@ -230,6 +229,7 @@
     <ClCompile Include="Code\InputLayout.cpp" />
     <ClCompile Include="Code\Keyboard.cpp" />
     <ClCompile Include="Code\Mouse.cpp" />
+    <ClCompile Include="Code\PixelShader.cpp" />
     <ClCompile Include="Code\Timer.cpp" />
     <ClCompile Include="Code\Topology.cpp" />
     <ClCompile Include="Code\TransformCBuff.cpp" />

@@ -1,7 +1,7 @@
-#include "PixelShader.h"
-#include "GraphicsThrowMacros.h"
+#include <PixelShader.h>
+#include <GraphicsThrowMacros.h>
 
-PixelShader::PixelShader(Graphics& gfx, const std::wstring& path){
+PixelShader::PixelShader(Graphics& gfx, const std::wstring& path) {
 	INFOMAN(gfx);
 
 	Microsoft::WRL::ComPtr<ID3DBlob> pBlob;
@@ -9,6 +9,6 @@ PixelShader::PixelShader(Graphics& gfx, const std::wstring& path){
 	GFX_THROW_INFO(GetDevice(gfx)->CreatePixelShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &pPixelShader));
 }
 
-void PixelShader::Bind(Graphics& gfx) noexcept{
+void PixelShader::Bind(Graphics& gfx) noexcept {
 	GetContext(gfx)->PSSetShader(pPixelShader.Get(), nullptr, 0u);
 }

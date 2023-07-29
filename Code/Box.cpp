@@ -1,6 +1,6 @@
-#include "Box.h"
-#include "BindableBase.h"
-#include "GraphicsThrowMacros.h"
+#include <Box.h>
+#include <BindableBase.h>
+#include <GraphicsThrowMacros.h>
 
 Box::Box(Graphics& gfx,
 	std::mt19937& rng,
@@ -42,11 +42,11 @@ Box::Box(Graphics& gfx,
 	};
 	AddBind(std::make_unique<VertexBuffer>(gfx, vertices));
 
-	auto pvs = std::make_unique<VertexShader>(gfx, L"VertexShader.cso");
+	auto pvs = std::make_unique<VertexShader>(gfx, L"Code/Shaders/VertexShader.cso");
 	auto pvsbc = pvs->GetBytecode();
 	AddBind(std::move(pvs));
 
-	AddBind(std::make_unique<PixelShader>(gfx, L"PixelShader.cso"));
+	AddBind(std::make_unique<PixelShader>(gfx, L"Code/Shaders/PixelShader.cso"));
 
 	const std::vector<unsigned short> indices =
 	{

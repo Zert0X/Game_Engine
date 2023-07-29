@@ -20,13 +20,15 @@ public:
 		INFOMAN(gfx);
 		D3D11_BUFFER_DESC ConstantBuffDesc = {};
 		ConstantBuffDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-		ConstantBuffDesc.Usage = D3D11_USAGE_DEFAULT;
-		ConstantBuffDesc.CPUAccessFlags = 0u;
+		ConstantBuffDesc.Usage = D3D11_USAGE_DYNAMIC;
+		ConstantBuffDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 		ConstantBuffDesc.MiscFlags = 0u;
-		ConstantBuffDesc.ByteWidth = sizeof(ConstantBuffer);
+		ConstantBuffDesc.ByteWidth = sizeof(consts);
 		ConstantBuffDesc.StructureByteStride = 0u;
+
 		D3D11_SUBRESOURCE_DATA ConstantSubData = {};
 		ConstantSubData.pSysMem = &consts;
+
 		GFX_THROW_INFO(GetDevice(gfx)->CreateBuffer(&ConstantBuffDesc, &ConstantSubData, &pConstantBuffer));
 	}
 
@@ -34,11 +36,12 @@ public:
 		INFOMAN(gfx);
 		D3D11_BUFFER_DESC ConstantBuffDesc = {};
 		ConstantBuffDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-		ConstantBuffDesc.Usage = D3D11_USAGE_DEFAULT;
-		ConstantBuffDesc.CPUAccessFlags = 0u;
+		ConstantBuffDesc.Usage = D3D11_USAGE_DYNAMIC;
+		ConstantBuffDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 		ConstantBuffDesc.MiscFlags = 0u;
-		ConstantBuffDesc.ByteWidth = sizeof(ConstantBuffer);
+		ConstantBuffDesc.ByteWidth = sizeof(C);
 		ConstantBuffDesc.StructureByteStride = 0u;
+
 		GFX_THROW_INFO(GetDevice(gfx)->CreateBuffer(&ConstantBuffDesc, nullptr, &pConstantBuffer));
 	}
 protected:
