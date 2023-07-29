@@ -8,6 +8,7 @@
 
 class Graphics
 {
+	friend class Bindable;
 public:
 	class Exception : public CustomException{
 		using CustomException::CustomException;

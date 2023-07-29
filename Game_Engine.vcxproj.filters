@@ -72,6 +72,39 @@
     <ClInclude Include="Resources\Headers\Mouse.h">
       <Filter>Файлы заголовков\InputDevices</Filter>
     </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\Bindable.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\ConstantBuffers.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\BindableBase.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\IndexBuffer.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\InputLayout.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\PixelShader.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\VertexShader.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\VertexBuffer.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\TransformCBuff.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Bindable\Topology.h">
+      <Filter>Файлы заголовков\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Drawable.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game_Engine.rc">
