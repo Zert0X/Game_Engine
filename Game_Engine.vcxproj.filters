@@ -16,6 +16,9 @@
     <Filter Include="Исходные файлы\Shaders">
       <UniqueIdentifier>{f7d148e8-b176-4fc0-bef3-8708e7939701}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Drawable">
+      <UniqueIdentifier>{5736a917-ac56-4b7d-a9be-1062c8e49051}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources\Headers\Window.h">
@@ -52,6 +55,12 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Resources\Headers\DxgiInfoManager.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\GraphicsThrowMacros.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\WindowThrowMacros.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

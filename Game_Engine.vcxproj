@@ -188,6 +188,7 @@
     <ClInclude Include="Resources\Headers\dxerr.h" />
     <ClInclude Include="Resources\Headers\DxgiInfoManager.h" />
     <ClInclude Include="Resources\Headers\Graphics.h" />
+    <ClInclude Include="Resources\Headers\GraphicsThrowMacros.h" />
     <ClInclude Include="Resources\Headers\Keyboard.h" />
     <ClInclude Include="Resources\Headers\Mouse.h" />
     <ClInclude Include="Resources\Headers\resource.h" />
@@ -195,6 +196,7 @@
     <ClInclude Include="Resources\Headers\Window.h" />
     <ClInclude Include="Resources\Headers\Onyx.h" />
     <ClInclude Include="Resources\Headers\WindowsMessageMap.h" />
+    <ClInclude Include="Resources\Headers\WindowThrowMacros.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game_Engine.rc" />
@@ -221,6 +223,10 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
     </FxCompile>
     <FxCompile Include="Code\Shaders\VertexShader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
