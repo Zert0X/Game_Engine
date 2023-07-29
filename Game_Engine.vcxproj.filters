@@ -28,6 +28,12 @@
     <Filter Include="Файлы заголовков\InputDevices">
       <UniqueIdentifier>{666eb721-561e-47e4-8a6b-20c63a545073}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Bindable">
+      <UniqueIdentifier>{57b2fc7f-952d-4469-9c3e-d82f7282521a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Drawable">
+      <UniqueIdentifier>{5e691d73-99b0-4a13-9544-dc8e257fe70b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources\Headers\Window.h">
@@ -105,6 +111,12 @@
     <ClInclude Include="Resources\Headers\Drawable\Drawable.h">
       <Filter>Файлы заголовков\Drawable</Filter>
     </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Box.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\PixelShader.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game_Engine.rc">
@@ -149,6 +161,33 @@
     </ClCompile>
     <ClCompile Include="Code\DxgiInfoManager.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Bindable.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\IndexBuffer.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\InputLayout.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Drawable.cpp">
+      <Filter>Исходные файлы\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Box.cpp">
+      <Filter>Исходные файлы\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Topology.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\TransformCBuff.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\VertexBuffer.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\VertexShader.cpp">
+      <Filter>Исходные файлы\Bindable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

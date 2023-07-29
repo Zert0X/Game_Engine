@@ -72,19 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Resources\Headers\Bindable;$(ProjectDir)Resources\Headers;$(ProjectDir)Resources\Headers\Drawable;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Resources\Headers\Bindable;$(ProjectDir)Resources\Headers;$(ProjectDir)Resources\Headers\Drawable;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Resources\Headers\Bindable;$(ProjectDir)Resources\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>H:\source\repos\Game_Engine\Resources\Headers;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Resources\Headers\Bindable;$(ProjectDir)Resources\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,7 +93,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions);IS_DEBUG=true</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
@@ -114,7 +114,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions);IS_DEBUG=true</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -138,7 +138,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions);IS_DEBUG=false</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
@@ -164,7 +164,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions);IS_DEBUG=false</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -183,8 +183,21 @@
     </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Code\PixelShader.cpp" />
     <ClInclude Include="Resources\Headers\App.h" />
+    <ClInclude Include="Resources\Headers\Bindable\Bindable.h" />
+    <ClInclude Include="Resources\Headers\Bindable\BindableBase.h" />
+    <ClInclude Include="Resources\Headers\Bindable\ConstantBuffers.h" />
+    <ClInclude Include="Resources\Headers\Bindable\IndexBuffer.h" />
+    <ClInclude Include="Resources\Headers\Bindable\InputLayout.h" />
+    <ClInclude Include="Resources\Headers\Bindable\PixelShader.h" />
+    <ClInclude Include="Resources\Headers\Bindable\Topology.h" />
+    <ClInclude Include="Resources\Headers\Bindable\TransformCBuff.h" />
+    <ClInclude Include="Resources\Headers\Bindable\VertexBuffer.h" />
+    <ClInclude Include="Resources\Headers\Bindable\VertexShader.h" />
     <ClInclude Include="Resources\Headers\CustomException.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Box.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Drawable.h" />
     <ClInclude Include="Resources\Headers\dxerr.h" />
     <ClInclude Include="Resources\Headers\DxgiInfoManager.h" />
     <ClInclude Include="Resources\Headers\Graphics.h" />
@@ -206,13 +219,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\App.cpp" />
+    <ClCompile Include="Code\Bindable.cpp" />
+    <ClCompile Include="Code\Box.cpp" />
     <ClCompile Include="Code\CustomException.cpp" />
+    <ClCompile Include="Code\Drawable.cpp" />
     <ClCompile Include="Code\dxerr.cpp" />
     <ClCompile Include="Code\DxgiInfoManager.cpp" />
     <ClCompile Include="Code\Graphics.cpp" />
+    <ClCompile Include="Code\IndexBuffer.cpp" />
+    <ClCompile Include="Code\InputLayout.cpp" />
     <ClCompile Include="Code\Keyboard.cpp" />
     <ClCompile Include="Code\Mouse.cpp" />
     <ClCompile Include="Code\Timer.cpp" />
+    <ClCompile Include="Code\Topology.cpp" />
+    <ClCompile Include="Code\TransformCBuff.cpp" />
+    <ClCompile Include="Code\VertexBuffer.cpp" />
+    <ClCompile Include="Code\VertexShader.cpp" />
     <ClCompile Include="Code\Window.cpp" />
     <ClCompile Include="Code\WindowsMessageMap.cpp" />
     <ClCompile Include="Code\WinMain.cpp" />

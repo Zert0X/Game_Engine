@@ -11,9 +11,9 @@ public:
 		GFX_THROW_INFO(GetContext(gfx)->Map(
 			pConstantBuffer.Get(), 0u,
 			D3D11_MAP_WRITE_DISCARD, 0u,
-			&msr
+			&MappedSubResource
 		));
-		memcpy(msr.pData, &consts, sizeof(consts));
+		memcpy(MappedSubResource.pData, &consts, sizeof(consts));
 		GetContext(gfx)->Unmap(pConstantBuffer.Get(), 0u);
 	}
 	ConstantBuffer(Graphics& gfx, const C& consts) {
