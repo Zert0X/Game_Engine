@@ -16,8 +16,17 @@
     <Filter Include="Исходные файлы\Shaders">
       <UniqueIdentifier>{f7d148e8-b176-4fc0-bef3-8708e7939701}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Drawable">
-      <UniqueIdentifier>{5736a917-ac56-4b7d-a9be-1062c8e49051}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Macros">
+      <UniqueIdentifier>{853c98a6-2612-4b59-bd5c-2e11c4c04ddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Drawable">
+      <UniqueIdentifier>{39a2209a-5e92-4275-814b-ea4254dd2f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Bindable">
+      <UniqueIdentifier>{0b49d27b-c56c-4804-a4ac-d93d10c54c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\InputDevices">
+      <UniqueIdentifier>{666eb721-561e-47e4-8a6b-20c63a545073}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,12 +40,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Resources\Headers\resource.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Resources\Headers\Keyboard.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Resources\Headers\Mouse.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Resources\Headers\App.h">
@@ -57,11 +60,17 @@
     <ClInclude Include="Resources\Headers\DxgiInfoManager.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Resources\Headers\GraphicsThrowMacros.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Resources\Headers\WindowThrowMacros.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Macros</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\GraphicsThrowMacros.h">
+      <Filter>Файлы заголовков\Macros</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Keyboard.h">
+      <Filter>Файлы заголовков\InputDevices</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Mouse.h">
+      <Filter>Файлы заголовков\InputDevices</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
