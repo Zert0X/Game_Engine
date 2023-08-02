@@ -196,9 +196,19 @@
     <ClInclude Include="Resources\Headers\Bindable\VertexShader.h" />
     <ClInclude Include="Resources\Headers\CustomException.h" />
     <ClInclude Include="Resources\Headers\Drawable\Box.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Cone.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Cube.h" />
     <ClInclude Include="Resources\Headers\Drawable\Drawable.h" />
+    <ClInclude Include="Resources\Headers\Drawable\DrawableBase.h" />
+    <ClInclude Include="Resources\Headers\Drawable\IndexedTriangleList.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Melon.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Plane.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Prism.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Pyramid.h" />
+    <ClInclude Include="Resources\Headers\Drawable\Sphere.h" />
     <ClInclude Include="Resources\Headers\dxerr.h" />
     <ClInclude Include="Resources\Headers\DxgiInfoManager.h" />
+    <ClInclude Include="Resources\Headers\EngineMath.h" />
     <ClInclude Include="Resources\Headers\Graphics.h" />
     <ClInclude Include="Resources\Headers\GraphicsThrowMacros.h" />
     <ClInclude Include="Resources\Headers\Keyboard.h" />
@@ -228,8 +238,10 @@
     <ClCompile Include="Code\IndexBuffer.cpp" />
     <ClCompile Include="Code\InputLayout.cpp" />
     <ClCompile Include="Code\Keyboard.cpp" />
+    <ClCompile Include="Code\Melon.cpp" />
     <ClCompile Include="Code\Mouse.cpp" />
     <ClCompile Include="Code\PixelShader.cpp" />
+    <ClCompile Include="Code\Pyramid.cpp" />
     <ClCompile Include="Code\Timer.cpp" />
     <ClCompile Include="Code\Topology.cpp" />
     <ClCompile Include="Code\TransformCBuff.cpp" />
@@ -240,7 +252,19 @@
     <ClCompile Include="Code\WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Code\Shaders\PixelShader.hlsl">
+    <FxCompile Include="Code\Shaders\ColorBlendPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Code\Shaders\ColorBlendVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Code\Shaders\ColorIndexPS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
@@ -250,7 +274,7 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Code\Shaders\VertexShader.hlsl">
+    <FxCompile Include="Code\Shaders\ColorIndexVS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>

@@ -114,6 +114,36 @@
     <ClInclude Include="Resources\Headers\Drawable\Box.h">
       <Filter>Файлы заголовков\Drawable</Filter>
     </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\DrawableBase.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\EngineMath.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Cone.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Cube.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\IndexedTriangleList.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Plane.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Prism.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Sphere.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Pyramid.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Headers\Drawable\Melon.h">
+      <Filter>Файлы заголовков\Drawable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game_Engine.rc">
@@ -189,12 +219,24 @@
     <ClCompile Include="Code\PixelShader.cpp">
       <Filter>Исходные файлы\Bindable</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Melon.cpp">
+      <Filter>Исходные файлы\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Pyramid.cpp">
+      <Filter>Исходные файлы\Drawable</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Code\Shaders\VertexShader.hlsl">
+    <FxCompile Include="Code\Shaders\ColorBlendPS.hlsl">
       <Filter>Исходные файлы\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Code\Shaders\PixelShader.hlsl">
+    <FxCompile Include="Code\Shaders\ColorBlendVS.hlsl">
+      <Filter>Исходные файлы\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Code\Shaders\ColorIndexPS.hlsl">
+      <Filter>Исходные файлы\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Code\Shaders\ColorIndexVS.hlsl">
       <Filter>Исходные файлы\Shaders</Filter>
     </FxCompile>
   </ItemGroup>
